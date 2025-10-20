@@ -1,0 +1,6 @@
+mystery_string = "CS1301"
+index = 0
+for i in mystery_string:
+    
+    print(index, i)
+    index += 1
