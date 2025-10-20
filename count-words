@@ -1,0 +1,9 @@
+myString = "There are seven words in this string."
+numSpaces = 0
+
+#Runs this loop for each character in the string
+for i in myString:   
+    #Checks if the character is a space
+    if i == " ": 
+        numSpaces += 1
+print("There are " + str(numSpaces + 1) + " words in the string.")
