@@ -1,0 +1,25 @@
+mystery_int = 7
+
+# Find the sum of all numbers between 0 and mystery_int, including bounds 
+# if mystery_int = 7, add 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7.
+# print sum
+#
+# mystery_int might be negative.
+# if mystery_int = -4, add -4 + -3 + -2 + -1 + 0.
+
+
+if mystery_int >= 0:
+    count = 0
+    total = 0
+
+    while count <= mystery_int:
+        total += count  
+        count += 1
+else:
+    count = mystery_int
+    total = 0
+    while count <= 0:
+        total += count
+        count += 1
+        
+print(total)    
