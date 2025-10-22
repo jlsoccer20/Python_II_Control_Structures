@@ -1,0 +1,20 @@
+away_team = [1, 0, 0, 0, 0, 0, 0, 0, 1]
+home_team = [0, 1, 0, 0, 0, 0, 2, 0]
+
+winner = ""
+points_away = 0
+points_home = 0
+
+for away, home in zip(away_team, home_team):
+    points_away += away
+    points_home += home
+    
+print("Away team :", points_away)
+print("Home team: ", points_home)    
+
+if points_away > points_home:
+    winner = "Away"
+else:
+    winner = "Home"
+    
+print("{} team wins!".format(winner))
