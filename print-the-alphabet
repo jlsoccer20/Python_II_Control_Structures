@@ -1,0 +1,13 @@
+start_character = "A"
+end_character = "Z"
+
+#Print all the letters from start_character to end_character, each on their own line. Include start_character and end_character themselves.
+
+
+# Convert characters to ASCII values
+start_ascii = ord(start_character)
+end_ascii = ord(end_character)
+
+# Loop through the ASCII values and print each character
+for ascii_value in range(start_ascii, end_ascii + 1):
+    print(chr(ascii_value))
