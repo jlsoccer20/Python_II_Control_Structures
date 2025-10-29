@@ -1,0 +1,15 @@
+a_string = "F12dav^f%$25d"
+
+#a_string is a string of random characters.
+
+# Add all the digits that appear in the string and prints their sum.
+
+sum = 0
+
+for character in a_string:
+    
+    if character in "1234567890":
+        int_character = int(character)
+        sum += int_character
+        
+print(sum)    
