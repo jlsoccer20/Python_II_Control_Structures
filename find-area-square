@@ -1,0 +1,8 @@
+# function takes one integer parameter, the side length of a square, and returns the area.
+
+def find_area(side):
+    area = side **2
+    return area
+
+test_side_length = 4
+print("A square with side length", test_side_length, "has an area of", find_area(test_side_length))
