@@ -1,0 +1,17 @@
+# four parameters, all integers: length, width, and height of a box respectively. 
+# The fourth should represent the number of boxes.
+
+# Returns an integer representing the total volume represented by the given boxes. 
+# For example, if length 10, width 2, height 2, 4 boxes, then total volume 160:
+# ((10 * 2 * 2) * 4) = 160.
+
+def total_volume(length, width, height, num_boxes):
+    volume = (length * width * height) * num_boxes
+    return volume
+
+test_length = 10
+test_width = 2
+test_height = 2
+test_box_count = 4
+result = total_volume(test_length, test_width, test_height, test_box_count)
+print(result)
