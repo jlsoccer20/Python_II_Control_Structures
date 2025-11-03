@@ -1,0 +1,39 @@
+# determines whether school is closed based on the weather and
+# temperature. We'll pretend the school is in Georgia, where
+# a little snow or sub-freezing temperatures are enough to
+# close down schools!
+#
+#The function takes three parameters:
+#
+# - temperature, a float
+# - weather, a string
+# - is_celsius, a boolean
+#
+# Returns True if temperature is below freezing 
+# (32 if is_celsius is False, 0 if is_celsius is True) 
+# or if weather is "snowy". Otherwise, return False.
+
+def snowed_in(temperature, weather, is_celsius = True):
+        
+    if is_celsius == False:
+        if temperature < 32:
+            result = True
+        elif weather == "snowy":            
+            result = True
+        else:
+            result = False
+
+        
+    else:
+        if temperature < 0:
+            result = True
+        elif weather == "snowy":
+            result = True
+        else:
+            result = False
+
+    return result
+
+print(snowed_in(15, "sunny")) #False
+print(snowed_in(15, "sunny", is_celsius = False)) #True
+print(snowed_in(15, "snowy", is_celsius = True)) #True
