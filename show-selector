@@ -11,4 +11,9 @@ def select_a_show(minutes_until_leave):
     else:
         result = "Watch a movie!"
     return result
+
 print(select_a_show(-5))
+print(select_a_show(5))
+print(select_a_show(34))
+print(select_a_show(68))
+print(select_a_show(124))
