@@ -1,0 +1,14 @@
+def select_a_show(minutes_until_leave):
+    result = ""
+    if minutes_until_leave <= 0:
+        result = "You're late!"
+    elif minutes_until_leave <= 10:
+        result = "Leave now, be early!"
+    elif minutes_until_leave <= 45:
+        result = "Watch a comedy!"
+    elif minutes_until_leave <= 100:
+        result = "Watch a drama!"
+    else:
+        result = "Watch a movie!"
+    return result
+print(select_a_show(-5))
