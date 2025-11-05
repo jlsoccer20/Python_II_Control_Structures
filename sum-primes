@@ -1,0 +1,20 @@
+# Takes input a single integer, then sum all prime numbers up to and including that integer (if it is prime) 
+# Note that 1 is not considered a prime number.
+
+def is_prime(n):
+    from itertools import count, islice
+    return n > 1 and all(n % i for i in islice(count(2), int(n**0.5)-1))
+
+def sum_of_primes(n):
+    
+    total = 0
+    for i in range(1, n+1):
+        if is_prime(i):
+            total += i
+            #print(i)
+    return total
+
+print(sum_of_primes(6)) #10
+print(sum_of_primes(7)) #17
+print(sum_of_primes(8)) #17
+print(sum_of_primes(11)) #28
