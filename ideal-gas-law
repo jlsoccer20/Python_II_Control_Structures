@@ -1,0 +1,19 @@
+# In chemistry, the ideal gas law states:
+# pressure * volume = # of moles * gas constant * temperature
+# PV = nRT
+# P = (nRT) / V
+# Takes as input 3 float variables: number of moles, temperature, volume
+
+
+def find_pressure(n_moles, temp, vol):
+
+    gas_constant = 0.082057
+    
+    pressure = (n_moles * gas_constant * temp) / vol
+    
+    return pressure
+
+test_n = 10
+test_T = 298
+test_V = 5
+print("Result:", find_pressure(test_n, test_T, test_V))
