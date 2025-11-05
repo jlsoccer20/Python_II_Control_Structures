@@ -1,0 +1,28 @@
+# A year is considered a leap year if it abides by the following rules:
+
+#  - Every 4th year IS a leap year, EXCEPT...
+#  - Every 100th year is NOT a leap year, EXCEPT...
+#  - Every 400th year IS a leap year.
+
+# This starts at year 0. For example:
+
+#  - 1993 NOT leap year because not multiple of 4
+#  - 1996 leap year because multiple of 4
+#  - 1900 NOT leap year because multiple of 100, even though multiple of 4
+#  - 2000 leap year because multiple of 400, even though multiple of 100
+
+def is_leap_year(year):
+    result = False
+    if year % 4 == 0:
+        result = True
+    if year % 100 == 0:
+        result = False
+    if year % 400 == 0:
+        result = True
+        
+    return result
+
+print("1993 is a leap year:", is_leap_year(1993))
+print("1996 is a leap year:", is_leap_year(1996))
+print("1900 is a leap year:", is_leap_year(1900))
+print("2000 is a leap year:", is_leap_year(2000))
