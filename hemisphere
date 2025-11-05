@@ -1,0 +1,23 @@
+# Southern hemisphere -90° to 0° latitude
+# Northern hemisphere 0° to 90° latitude 
+# Eastern hemisphere 0° to 180° longitude 
+# Western hemisphere -180° to 0° longitude
+
+def semihemisphere(latitude, longitude):
+    
+    if latitude < 0: 
+        NS_hemisphere = "South"
+    elif latitude > 0:
+        NS_hemisphere = "North"
+        
+    if longitude < 0:
+        EW_hemisphere = "west"
+    elif longitude > 0:
+        EW_hemisphere = "east"
+    
+    return NS_hemisphere + EW_hemisphere
+
+print(semihemisphere(33.7, -84.4)) #Northwest
+print(semihemisphere(-71.1, 86.3)) #Southeast
+print(semihemisphere(67.1, 12.1)) #Northeast
+print(semihemisphere(-11.6, -62.3)) #Southwest
