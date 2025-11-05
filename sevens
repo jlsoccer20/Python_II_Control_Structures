@@ -1,0 +1,21 @@
+# Takes one parameter, a_string. 
+# Returns True if exactly three '7's in a_string. 
+# Returns False if less than three or more than three '7's
+
+def lucky_sevens(a_string):
+    
+    count = 0
+    
+    for character in a_string:
+        if character == "7":
+            count += 1
+    
+    if count == 3:
+        return True
+    else:
+        return False
+
+print(lucky_sevens("happy777bday")) # True
+print(lucky_sevens("h7app7ybd7ay")) # True
+print(lucky_sevens("happy77bday")) # False
+print(lucky_sevens("h777appy777bday")) # False
