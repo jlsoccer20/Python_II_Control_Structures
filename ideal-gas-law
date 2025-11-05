@@ -5,7 +5,7 @@
 # Takes as input 3 float variables: number of moles, temperature, volume
 
 
-def find_pressure(n_moles, temp, vol):
+def find_pressure(n_moles, temp, vol, gas_constant = 0.082057):
 
     gas_constant = 0.082057
     
@@ -17,3 +17,9 @@ test_n = 10
 test_T = 298
 test_V = 5
 print("Result:", find_pressure(test_n, test_T, test_V))
+
+test_n = 10
+test_T = 298
+test_V = 5
+test_R = 62.364 #Torr!
+print("Result:", find_pressure(test_n, test_T, test_V, R = test_R))
