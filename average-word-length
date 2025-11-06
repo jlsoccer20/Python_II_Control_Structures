@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+
+# three functions:
+# word_count, letter_count, and average_word_length
+
+#-----------------------------------------------------------
+
+# word_count takes string as input 
+# Returns number of words in string. 
+# Assume number of words in string one more than number spaces in string.
+
+def word_count(string):
+    num_words = 0
+    for character in string:
+        if character == " ":
+            num_words += 1
+    num_words += 1 #counts the last word
+    return num_words #number of words in string
+
+#-----------------------------------------------------------
+
+# letter_count takes string as input
+# Returns number of letters in the string. 
+# Assume string is only letters and spaces: no punctuation or numbers.
+
+def letter_count(string):
+    num_letters = 0
+    for character in string:
+        if character != " ": # exclude spaces in letter count
+            num_letters += 1
+    return num_letters 
+
+#-----------------------------------------------------------
+
+# average_word_length takes string as input. 
+# Calls the functions word_count and letter_count
+# Returns average length of the words in the string. 
+
+def average_word_length(string):
+    words = word_count(string)
+    letters = letter_count(string)
+    average = letters / words
+    return average
+
+#-----------------------------------------------------------
+
+# test cases
+
+a_string = "Up with the white and gold" # average word length 3.5
+
+print(word_count(a_string))
+print(letter_count(a_string))
+print(average_word_length(a_string))
+
