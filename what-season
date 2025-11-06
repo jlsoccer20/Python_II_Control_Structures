@@ -1,0 +1,26 @@
+# function what_season takes two parameters: 
+# first a string representing a month
+# second an integer representing a day
+
+# Returns "Spring" if the date is in Spring, and so on.
+
+# - Spring starts March 20.
+# - Summer starts June 21.
+# - Fall starts September 22.
+# - Winter starts December 21.
+
+def what_season(month, day):
+    if (month == "March" and day >= 20) or (month in ["April", "May"]) or (month == "June" and day <= 20):
+        return "Spring"
+    elif (month == "June" and day >= 21) or (month in ["July", "August"]) or (month == "September" and day <= 21):
+        return "Summer"
+    elif (month == "September" and day >= 22) or (month in ["October", "November"]) or (month == "December" and day <= 20):
+        return "Fall"
+    else:
+        return "Winter"
+
+print(what_season("December", 25)) #Winter
+print(what_season("June", 15)) #Spring
+print(what_season("June", 23)) #Summer
+print(what_season("September", 27)) #Fall
+
