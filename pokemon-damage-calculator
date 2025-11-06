@@ -1,0 +1,49 @@
+# two functions, calculate_damage and calculate_modifier
+
+# calculate_damage calls calculate_modifier
+# Accepts 10 parameters: 
+# STAB,
+# Type, 
+# Critical, 
+# Other, 
+# Random, 
+# Level, 
+# Attack, 
+# Defense
+# Base
+# Damage is calculated using this formula:
+# courses.edx.org/asset-v1:GTx+CS1301xII+1T2018+type@asset+block@DamageCalc.png
+
+# calculate_modifier accepts 5 parameters: 
+# STAB, 
+# Type, 
+# Critical, 
+# Other,
+#Random 
+# Modifier is calculated using this formula:
+# https://studio.edx.org/asset-v1:GTx+CS1301+1T2017+type@asset+block@ModifierCalc.png
+
+def calculate_damage(STAB, Type, Critical, Other, Random, Level, Attack, Defense, Base):
+    
+    mod = calculate_modifier(STAB, Type, Critical, Other, Random)
+    damage = (((2*Level + 10) / 250) * (Attack/Defense) * Base + 2) * mod
+    return damage
+
+def calculate_modifier(STAB, Type, Critical, Other, Random):
+    mod = STAB * Type * Critical * Other * Random
+    return mod
+
+# Test cases
+# 16.0
+STAB = 1
+Type = 0.25
+Critical = 2
+Other = 1
+Random = 1
+Level = 50
+Attack = 125
+Defense = 110
+Base = 60
+
+print(calculate_damage(STAB, Type, Critical, Other, Random, Level, Attack, Defense, Base))
+
