@@ -1,0 +1,27 @@
+# Consult this blood pressures chart: http://bit.ly/2CloACs
+
+# Function check_blood_pressure takes two parameters: 
+# a systolic blood pressure and a diastolic blood pressure
+
+# Returns "Low", "Ideal", "Pre-high", or "High" 
+# -- whichever corresponds to the given systolic and diastolic blood pressure.
+
+# If a combined blood pressure is on the line between two categories (e.g. 80 and 60, or 120 and 70),
+# result is the higher category (e.g. Ideal and Pre-high for those two combinations).
+
+def check_blood_pressure(systolic_bp, diastolic_bp):
+    # Check for High first, since we want to return the higher category if on the border
+    if systolic_bp >= 140 or diastolic_bp >= 90:
+        return "High"
+    elif systolic_bp >= 120 or diastolic_bp >= 80:
+        return "Pre-high"
+    elif systolic_bp >= 90 or diastolic_bp >= 60:
+        return "Ideal"
+    else:
+        return "Low"
+
+# Ideal
+test_systolic = 110
+test_diastolic = 70
+
+print(check_blood_pressure(test_systolic, test_diastolic))
