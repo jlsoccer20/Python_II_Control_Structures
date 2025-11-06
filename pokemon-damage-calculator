@@ -2,24 +2,26 @@
 
 # calculate_damage calls calculate_modifier
 # Accepts 10 parameters: 
-# STAB,
-# Type, 
-# Critical, 
-# Other, 
-# Random, 
-# Level, 
-# Attack, 
+# STAB
+# Type 
+# Critical
+# Other
+# Random
+# Level 
+# Attack
 # Defense
 # Base
+
 # Damage is calculated using this formula:
 # courses.edx.org/asset-v1:GTx+CS1301xII+1T2018+type@asset+block@DamageCalc.png
 
 # calculate_modifier accepts 5 parameters: 
-# STAB, 
-# Type, 
-# Critical, 
-# Other,
-#Random 
+# STAB
+# Type 
+# Critical
+# Other
+# Random 
+
 # Modifier is calculated using this formula:
 # https://studio.edx.org/asset-v1:GTx+CS1301+1T2017+type@asset+block@ModifierCalc.png
 
