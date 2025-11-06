@@ -1,0 +1,10 @@
+mystery_value = "9"
+
+# divides 10 by mystery_value and prints the result. 
+# If error occurs, prints "Not possible".
+
+try:
+    result = 10 / mystery_value
+    print(result)
+except:    
+    print("Not possible")
