@@ -1,0 +1,30 @@
+# Check if string has invalid characters
+
+# F.x. credit card number, make sure no non-numerals (accept dashes or spaces)
+# F.x. name, make sure characters are letters, spaces, or punctuation mark
+
+# Function is_valid takes two parameters: 
+# - string to check
+# - string of all valid characters.
+
+# Returns True if all characters in input string are present in valid characters
+# Returns False if any character not in valid characters
+
+def is_valid(string, valid_characters):
+    result = True
+    for character in string:
+        if character not in valid_characters:
+            result = False
+    return result
+
+# Test cases
+sample_valid_string = "1234-5678-9011-1111"
+sample_invalid_string = "1234!5678.9011?1111"
+valid_characters = "0123456789-"
+
+print(is_valid(sample_valid_string, valid_characters)) #True
+print(is_valid(sample_invalid_string, valid_characters)) #False
+
+
+
+
