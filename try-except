@@ -8,3 +8,18 @@ try:
     print(result)
 except:    
     print("Not possible")
+
+
+
+
+my_string = "This string is not a number!"
+
+try:    
+    print("Converting my_string to int...")
+    my_int = int(my_string)
+    print(my_int)
+
+except: 
+    print("Can't convert; my_string not a number.")
+print("Done!")
+
