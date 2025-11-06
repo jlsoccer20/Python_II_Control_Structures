@@ -1,0 +1,38 @@
+# count all the vowels in a string or all the consonants
+
+# function count_letters
+# Takes two parameters: 
+# - the string to search, 
+# - boolean called find_consonants. 
+
+# If find_consonants is True, then count consonants. 
+# If False, then count vowels.
+
+# Returns the number of vowels or consonants in the string
+
+def count_letters(string, find_consonants):
+  
+    vowels = "aeiou"
+    letters = 0
+    
+    if find_consonants == True:
+        for letter in string:
+            if letter == " ":
+                continue
+            if letter not in vowels:
+                letters += 1
+    else:
+        for letter in string:
+            if letter in vowels:
+                letters += 1
+        
+    return letters
+
+a_string = "up with the white and gold"
+
+print(count_letters(a_string, True)) #14
+print(count_letters(a_string, False)) #7
+
+
+
+
