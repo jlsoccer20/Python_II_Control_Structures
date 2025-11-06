@@ -8,18 +8,22 @@ try:
     print(result)
 except:    
     print("Not possible")
-
-
-
-
+# -------------------------------------------------------------
 my_string = "This string is not a number!"
-
 try:    
     print("Converting my_string to int...")
     my_int = int(my_string)
     print(my_int)
-
 except: 
     print("Can't convert; my_string not a number.")
 print("Done!")
+# -------------------------------------------------------------
+# Zero Division Error
+mystery_value = 0
+# In the case that mystery_value is equal to 0, prints "Not possible".
+try:
+    result = 10 / mystery_value
+    print(result)
+except ZeroDivisionError:
+    print("Not possible")
 
