@@ -1,0 +1,185 @@
+#---------------------------------------------------------------
+try:
+    #Open InputFile.txt in read-only mode
+    input_file = open("InputFile.txt", mode = "r")
+    #For each line in the file
+    for line in input_file:
+        #Print the line
+        print(line)
+    #Close the file
+    input_file.close()
+#Catch an IOError
+except IOError as error:
+    print("An input error occurred!")
+
+#---------------------------------------------------------------
+try:
+    #Open InputFile.txt in read-only mode
+    input_file = open("InputFile.txt", mode = "r")  
+#Catch an IOError
+except IOError as error:    
+    print("An input error occurred!")
+else:
+    #For each line in the file
+    for line in input_file:  
+        #Print the line
+        print(line) 
+    #Close the file
+    input_file.close()   
+
+#---------------------------------------------------------------
+try:
+    #Open InputFile.txt in read-only mode
+    input_file = open("FakeInputFile.txt", mode = "r")  
+#Catch an IOError
+except IOError as error:    
+    print("An input error occurred!")
+else:
+    #For each line in the file
+    for line in input_file:  
+        #Print the line
+        print(line) 
+    #Close the file
+    input_file.close()   
+#---------------------------------------------------------------
+my_string = "1"
+#Run the code below until an error occurs
+try:    
+    print("Converting my_string to int...")
+    my_int = int(my_string)
+    print(my_int)
+#If an error occurs, check if it's a ValueError or 
+#TypeError
+except (ValueError, TypeError) as error: 
+    print("A ValueError or TypeError occurred.")
+#Check if some other type of error occurred
+except Exception as error:  
+    print("Some other type of error occurred.")
+#If no errors occurred, then do the following
+else:   
+    print("No errors occurred!")
+print("Done!")
+
+#---------------------------------------------------------------
+#Open NumberFile.txt in read-only mode
+input_file = open("NumberFile.txt", mode = "r")  
+try:
+    #For each line in the file
+    for line in input_file:  
+        #Print the line
+        print(int(line)) 
+#Catch an IOError
+except ValueError as error:    
+    print("A value error occurred!")
+else:
+    print("No errors occurred!")
+finally:
+    #Close the file
+    input_file.close()   
+#---------------------------------------------------------------
+#Open NumberFile.txt in read-only mode
+input_file = open("NumberFile.txt", mode = "r")  
+try:
+    #For each line in the file
+    for line in input_file:  
+        #Print the line
+        print(int(line)) 
+#Catch an IOError
+except ValueError as error:    
+    print("A value error occurred!")
+else:
+    print("No errors occurred!")
+#Close the file
+input_file.close()
+#---------------------------------------------------------------
+
+my_string = "This string is not a number!"
+#Run the code below until an error occurs
+try:    
+    print("Converting my_string to int...")
+    print(1 / 0)
+    print("String #" + 1 + ": " + my_string)
+    my_int = int(my_string)
+    print(my_int)
+#If an error occurs, check if it's a ValueError
+except ValueError as error: 
+    print(error)
+#If an error occurs, check if it's a TypeError
+except TypeError as error:  
+    print(error)
+finally:
+    print("An unknown error occurred!")
+print("Done!")
+
+
+#---------------------------------------------------------------
+try:
+    #Open NumberFile.txt in read-only mode
+    input_file = open("NumberFile.txt", mode = "r")  
+    try:
+        #For each line in the file
+        for line in input_file:  
+            #Print the line
+            print(int(line)) 
+    #Catch a ValueError
+    except ValueError as error:    
+        print("A value error occurred!")
+    else:
+        print("No errors occurred converting the file!")
+    finally:
+        #Close the file
+        input_file.close()  
+#Catch an IOError
+except IOError as error:
+    print("An error occurred reading the file!")
+
+#---------------------------------------------------------------
+try:
+    #Open InputFile.txt in read-only mode
+    input_file = open("InputFile.txt", mode = "r")  
+    try:
+        #For each line in the file
+        for line in input_file:  
+            #Print the line
+            print(int(line)) 
+    #Catch a ValueError
+    except ValueError as error:    
+        print("A value error occurred!")
+    else:
+        print("No errors occurred converting the file!")
+    finally:
+        #Close the file
+        input_file.close()  
+#Catch an IOError
+except IOError as error:
+    print("An error occurred reading the file!")
+
+#---------------------------------------------------------------
+try:
+    #Open InputFile.txt in read-only mode
+    input_file = open("FakeFile.txt", mode = "r")  
+    try:
+        #For each line in the file
+        for line in input_file:  
+            #Print the line
+            print(int(line)) 
+    #Catch a ValueError
+    except ValueError as error:    
+        print("A value error occurred!")
+    else:
+        print("No errors occurred converting the file!")
+    finally:
+        #Close the file
+        input_file.close()
+#Catch an IOError
+except IOError as error:
+    print("An error occurred reading the file!")
+
+#---------------------------------------------------------------
+
+#---------------------------------------------------------------
+
+#---------------------------------------------------------------
+
+
+
