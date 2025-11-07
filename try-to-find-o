@@ -1,0 +1,15 @@
+words = ["dog", "sparrow", "cat", "frog"]
+
+# print the location of the 'o' in each word in the list. 
+# prints "Not found" when the word does not have an 'o'.
+
+for word in words:
+    try:
+        print(word.index("o"))
+    except:
+        print("Not found")
+
+    
+    
+    
+    
