@@ -8,11 +8,13 @@
 def word_count(my_string):
    
     num_words = 0
+    previous = ""
     
     try:
         for character in my_string:
-            if character == " ":
+            if character != " " and previous == " ":
                 num_words += 1
+            previous = character
         return num_words + 1
 
     except Exception as error:
@@ -24,13 +26,18 @@ def word_count(my_string):
 #Word Count: 4
 #Word Count: 1
 #Word Count: 7
-#Word Count: Not a string
-#Word Count: Not a string
-#Word Count: Not a string
-
 print("Word Count:", word_count("Four words are here!"))
 print("Word Count:", word_count("One."))
 print("Word Count:", word_count("There are seven words in this sentence."))
+
+#Word Count: Not a string
+#Word Count: Not a string
+#Word Count: Not a string
 print("Word Count:", word_count(5))
 print("Word Count:", word_count(5.1))
 print("Word Count:", word_count(True))
+
+
+#Word Count: 2
+print("Word Count:", word_count("Hi   David"))
+
