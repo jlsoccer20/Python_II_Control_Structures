@@ -1,0 +1,28 @@
+a_list = [1, 2, 3, 4, 5]
+list_index = 7
+
+# Attempts to (incorrectly) index a list
+# Prints error messages
+
+
+def index_my_list():
+    
+    print("Accessing index...")
+    
+    try:
+        result = a_list[list_index]
+        print("Value at index:", result)
+    
+    except IndexError:
+        message = "Invalid index!!"
+        #return message
+        print(message)
+        
+    except Exception as error:
+        print("Unknown error!")
+
+    finally:
+        print("Done!")
+
+
+index_my_list()
