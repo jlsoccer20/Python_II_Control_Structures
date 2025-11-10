@@ -1,0 +1,18 @@
+# function find_pressure returns pressure given variables n, T, V, and optionally R, according to this formula:
+# Pressure = (nRT) / V
+
+def find_pressure(n, T, V, R = 0.082057):
+    try:
+        pressure = (n*R*T)/V
+        return pressure
+    except Exception as error:
+        #print(error)
+        message = "Volume must be greater than 0."
+        return message
+
+# test cases
+test_n = 10
+test_T = 298
+test_V = 0
+test_R = 62.364 #Torr!
+print("Result:", find_pressure(test_n, test_T, test_V, R = test_R))
