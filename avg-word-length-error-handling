@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------------
+# Function average_word_length()
+# takes input string my_string
+# returns output average length of the words in the string.
+
+# Accounts for consecutive spaces. 
+# Does not count punctuation ".,!?"
+# - Assumes the only characters in the string are letters, punctuation marks listed above, and spaces.
+
+# Example:
+#  "Hi   Lucy" is two words with average length of 3.0 characters.
+#  "  David" has one word with average length of 5.0 characters.
+#  "Hi, Lucy" has two words with average length of 3.0 characters.
+
+# - If input my_string not type string, returns "Not a string".
+
+# - If no words in my_string, returns "No words".
+# Example:
+#   "" (empty string) 
+#   ".,!?" (string of punctuation marks)
+# ---------------------------------------------------------------------------------
+
+def average_word_length(my_string):
+    
+    length = 0
+    average_length = 0
+    num_words = 0
+    previous = ""
+    punctuation = ".,!?"
+    
+    try:
+        for character in my_string:
+            if character != " " and character not in punctuation:
+                length += 1
+                
+                if previous == " " or num_words == 0:
+                    num_words += 1
+                    
+            previous = character
+        
+        if num_words == 0:
+            message = "No words"
+            return message
+        
+        average_length = length / num_words
+        return average_length
+    
+    except Exception as error:
+        message = "Not a string"
+        return message
+
+# ---------------------------------------------------------------------------------
+
+# Test cases
+# 2.0
+# 3.0
+# 4.0
+# Not a string
+# No words
+
+print(average_word_length("Hi"))
+print(average_word_length("Hi, Lucy"))
+print(average_word_length("   What   big spaces  you    have!"))
+print(average_word_length(True))
+print(average_word_length("?!?!?! ... !"))
+
+
+# ---------------------------------------------------------------------------------
+
