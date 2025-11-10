@@ -1,0 +1,36 @@
+# function word_count takes input my_string and returns output number of words string
+# Assume every space indicates a new word
+# String are not empty - there should always be at least one word if my_string is a string.
+
+# If input not a string returns "Not a string". 
+# Otherwise, returns an integer number of words in string.
+
+def word_count(my_string):
+   
+    num_words = 0
+    
+    try:
+        for character in my_string:
+            if character == " ":
+                num_words += 1
+        return num_words + 1
+
+    except Exception as error:
+        #print(error)
+        message = "Not a string"
+        return message
+
+#Test cases
+#Word Count: 4
+#Word Count: 1
+#Word Count: 7
+#Word Count: Not a string
+#Word Count: Not a string
+#Word Count: Not a string
+
+print("Word Count:", word_count("Four words are here!"))
+print("Word Count:", word_count("One."))
+print("Word Count:", word_count("There are seven words in this sentence."))
+print("Word Count:", word_count(5))
+print("Word Count:", word_count(5.1))
+print("Word Count:", word_count(True))
