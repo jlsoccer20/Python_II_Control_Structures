@@ -1,0 +1,23 @@
+# Controls the speed of a ceiling fan by pulling a string.
+# Pulling the string increases the fan's speed by 1. 
+# If already maximum speed, changes speed back to 0.
+
+# Function pullString() takes two parameters, current_speed and max_speed, of type int
+# Returns fan speed
+
+def pullString(current_speed, max_speed):
+    new_speed = 0
+    
+    if current_speed < max_speed:
+        new_speed = current_speed + 1
+    elif current_speed == max_speed:
+        new_speed = 0
+    
+    return new_speed
+
+# Test cases
+print(pullString(2, 5)) #3
+print(pullString(4, 5)) #5
+print(pullString(7, 7)) #0
+
+
