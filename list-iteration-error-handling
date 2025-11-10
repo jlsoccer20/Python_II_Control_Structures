@@ -1,0 +1,11 @@
+given_items = ["one", "two", 3, 4, "five", ["six", "seven", "eight"]]
+
+# iterates through the items 
+# For each item, attempts to iterate through the item and print each character seperately. 
+
+for item in given_items:
+    try:
+        for character in item:
+            print(character)
+    except Exception as error:
+        print(error)
