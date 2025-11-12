@@ -1,0 +1,73 @@
+# Function sortString
+# Takes one parameter as input, a string. 
+
+# If the input is not a string, sortString should return the string "Not a string!"
+
+# If input is string, sortString returns four-line string:
+# - each upper-case letter
+# - each lower-case letter
+# - each punctuation mark or numeral
+# - integer representing number of spaces
+
+# Example:
+# sortString("Hello, world!!1") returns: 
+# H
+# elloworld
+# ,!!1
+# 1
+
+# Calls ord() function, pass character string into ord(), returns a number.
+# - Lower-case letters return number  97 to 122
+# - Upper-case letters return number  65 to 90
+# - Puncutation marks and numbers     33 to 64
+# - Spaces                            32
+# Example 97 is 'a', 122 is 'z'
+
+def sortString(my_input):
+    
+    # Check if valid string
+    if isinstance(my_input, str):
+        #print("Valid string")
+        
+        upper_case = ""
+        lower_case = ""
+        punctuation = ""
+        spaces = 0
+        message = ""
+       
+        for character in my_input:
+            ord_num = ord(character)
+            
+            # upper case
+            if ord_num >= 65 and ord_num <= 90:
+                upper_case += character
+            # lower case
+            elif ord_num >= 97 and ord_num <= 122:
+                lower_case += character
+            elif ord_num >= 33 and ord_num <= 64:
+                punctuation += character
+            elif ord_num == 32:
+                spaces += 1
+
+        
+        output_list = [upper_case, lower_case, punctuation]
+        
+        for i in output_list:
+            message += i + "\n"
+        message += str(spaces)
+        return message
+
+     # If my_input not a string, returns "Not a string!"
+    else:
+        #print("Invalid input")
+        return "Not a string!"
+    
+    return
+
+#ZOMGHCS
+#ello
+#,1301!!
+#2
+print(sortString("ZOMG Hello, CS1301!!"))
+#print(sortString(True))
+
