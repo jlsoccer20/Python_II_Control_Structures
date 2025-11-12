@@ -1,0 +1,39 @@
+driver_speed = 57
+speed_limit = 55
+school_zone = True
+
+# Determine price speeding ticket depending on:
+# - driver's speed
+# - speed limit
+# - school zone
+
+# The reasoning that determines the price of the ticket is:
+# - Baseline: $100 for speeding (driver_speed greater than speed_limit)
+# - $10 dollars per mile over speed limit
+# - 2x if school_zone
+
+# Print cost of speeding ticket. 
+# If not speeding, $0.
+
+# $240
+# $100 for speeding, 
+# $20 for 2mph above limit
+# x2 school zone.
+
+def speedingTicket(driver_speed, speed_limit, school_zone):
+    
+    fine = 0
+    
+    if driver_speed > speed_limit:
+        fine += 100
+        miles_over = driver_speed - speed_limit
+        fine += miles_over * 10
+        
+    if school_zone == True:
+        fine += 2
+        
+    return fine
+
+print("$" + str(speedingTicket(driver_speed, speed_limit, school_zone)))
+
+
