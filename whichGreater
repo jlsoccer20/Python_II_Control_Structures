@@ -1,0 +1,25 @@
+int1 = 7
+int2 = 5
+
+# whichGreater() takes 2 integers as input, 
+# compares values and outputs a string:
+# - "int1 is greater"
+# - "int2 is greater" 
+# - "int1 and int2 are equal"
+
+def whichGreater(int1,int2):
+    result = ""
+    if int1 > int2:
+        result = "int1 is greater"
+    elif int1 < int2:
+        result = "int2 is greater"
+    else:
+        result = "int1 and int2 are equal"
+    
+    return result
+
+print(whichGreater(int1,int2))
+
+
+
+
