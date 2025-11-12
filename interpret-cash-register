@@ -1,0 +1,46 @@
+# Cash register looks at what the cashier enters and infers
+# whether it's their PIN number, their password, or the cash
+# total for a transaction.
+
+# The register makes this decision with the following rules:
+# - If only digits, then PIN number.
+# - If decimal number, then transaction amount.
+# - If anything else, then password.
+
+# Function interpretCashier()
+# - takes one parameter as input of type string.
+
+# - If the string entered represents a PIN number, return
+#   "PIN". 
+# - If the string entered represents a transaction amount,
+#   return "Transaction".
+# - If the string entered represents a password, return
+#   "Password".
+
+def interpretCashier(string):
+    
+    try:
+        int_string = int(string)
+        #return int_string
+        return "PIN"
+ 
+    except:
+        try: 
+            float_string = float(string)
+            #return float_string
+            return "Transaction"
+        
+        except:
+            return "Password"
+        
+        #except Exception as e:
+        #    return e
+      
+    return
+
+
+print(interpretCashier("24.59")) # Transaction
+print(interpretCashier("123456")) # PIN
+print(interpretCashier("my$up3rs3cur3p4$$w0rd")) # Password
+
+
