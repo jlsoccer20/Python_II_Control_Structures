@@ -1,0 +1,24 @@
+# Function remainder() takes two parameters: 
+# - dividend
+# - divisor.
+# Returns remainder when you divide the dividend by the divisor.
+
+#For example:
+# remainder(9, 3) -> 0
+# remainder(8, 3) -> 2
+# remainder(7, 3) -> 1
+# remainder(6, 3) -> 0
+
+# Assume both dividend and divisor greater than 0
+
+def remainder(dividend, divisor):
+    result = dividend % divisor
+    return result
+
+#Test cases
+print(remainder(9, 3)) #0
+print(remainder(11, 4)) #3
+print(remainder(27, 5)) #2
+
+
+
