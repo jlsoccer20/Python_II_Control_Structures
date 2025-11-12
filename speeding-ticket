@@ -30,7 +30,7 @@ def speedingTicket(driver_speed, speed_limit, school_zone):
         fine += miles_over * 10
         
     if school_zone == True:
-        fine += 2
+        fine *= 2
         
     return fine
 
