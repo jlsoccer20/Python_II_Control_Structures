@@ -1,0 +1,64 @@
+#The Collatz Conjecture is a famous sequence in mathematics
+#proposed by Lothar Collatz. It proceeds as follows:
+
+# Start with any number. 
+
+# If the number is even, divide it by 2. 
+# If the number is odd, triple it and add one. 
+# Repeat.
+
+# Eventually, no matter what number you begin with, this
+# sequence will converge on 1 (and if you continue repeating
+# it, you'll repeat 1-4-2 infinitely).
+
+# For example, start with 21:
+# 5 is odd, so 5 * 3 + 1 = 16
+# 16 is even, so 16 / 2 = 8
+# 8 is even, so 8 / 2 = 4
+# 4 is even, so 4 / 2 = 2
+# 2 is even, so 2 / 2 = 1
+
+# Starting with 5, this sequence converges on 1 in 5 iterations: 
+# 5 to 16
+# 16 to 8
+# 8 to 4
+# 4 to 2
+# 2 to 1
+
+######################################################
+
+# function collatz()
+# takes input:
+# - integer
+# returns the number of iterations for Collatz sequence to reach 1 from that number
+
+# For example, collatz(5) would return 5 because it took 5 iterations to converge on 1
+
+def collatz(num):
+    
+    count = 0
+    
+    while num != 1:
+        
+        #print("Num: ", int(num))
+        
+        if num % 2 == 0: # even
+            num /= 2
+            #print("even: ", num)
+            count += 1
+            
+        else: #odd
+            num *= 3
+            num += 1
+            #print("odd ", num)
+            count += 1
+            
+    return count
+
+
+# 5
+# 17
+# 23
+print(collatz(5))
+print(collatz(15))
+print(collatz(25))
