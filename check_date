@@ -1,0 +1,52 @@
+# function check_date
+# requires two positional parameters: 
+# - string representing name of month
+# - integer representing date
+
+# keyword parameter
+# is_leap_year, assumed False, representing whether or not leap year
+
+# Returns True if date is valid calendar date
+# Returns False if not. 
+
+# A date may not be a valid calendar date if the month isn't a real month, or if that date does not exist for that month.
+
+def check_date(month, date, is_leap_year = False): # string, integer
+    
+    days_in_month = {
+        "January": 31,
+        "February": 28,
+        "March": 31,
+        "April": 30,
+        "May": 31,
+        "June": 30,
+        "July": 31,
+        "August": 31,
+        "September": 30,
+        "October": 31,
+        "November": 30,
+        "December": 31
+    }
+    
+    if month not in days_in_month:
+        return False
+    
+    if month == "February" and is_leap_year:
+        max_day = 29
+    else:
+        max_day = days_in_month[month]
+        
+        
+    return date <= max_day
+
+
+# Examples
+# True
+# True
+# False
+# False
+
+print(check_date("January", 31)) # True
+print(check_date("February", 29, is_leap_year = True)) # True
+print(check_date("Techtember", 15, is_leap_year = True)) # False
+print(check_date("June", 31)) # False
