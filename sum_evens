@@ -1,0 +1,25 @@
+# function sum_evens()
+# - 2 parameters: minimum, maximum
+# Adds all even numbers between incl. minimum and maximum
+# Returns the sum.
+
+def sum_evens(minimum, maximum):
+    
+    total = 0
+    
+    for i in range(minimum, maximum+1):
+        #print("Looping over i: ", i)
+        
+        if i % 2 == 0:
+            #print("Is even: ", i)
+            total += i
+            #print("Temp sum: ", total)
+            
+    return total
+
+# 12
+# 0 
+# 66
+print(sum_evens(2, 6))
+print(sum_evens(-2, 2))
+print(sum_evens(5, 17))
