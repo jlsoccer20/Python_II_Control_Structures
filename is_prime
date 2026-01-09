@@ -1,0 +1,37 @@
+# function is_prime
+# takes input integer
+# Returns True if the integer is prime
+# Returns False if integer is not prime
+
+# A prime number is one into which no number is divisible besides 1 and itself. 
+# For example, 6 is not prime because it is divisible by 2 and 3. 
+# 7 is prime because it is only divisible by 1 and itself.
+
+def is_prime(integer):
+    
+    for i in range(2, integer-1): # max range
+                   
+        #print(i)
+                
+        if integer % i == 0:
+            return False
+        else:
+            #print("Looping back", i)
+            continue
+        
+        
+    return True
+
+# True
+# False
+# True
+# False
+# True
+# False
+
+print(is_prime(5))
+print(is_prime(6))
+print(is_prime(97))
+print(is_prime(105))
+print(is_prime(997))
+print(is_prime(999))
