@@ -1,0 +1,24 @@
+# function get_capitals
+# parameter string
+# Returns string containing only capital letters from original string: 
+# no lower-case letters, numbers, punctuation marks, or spaces
+
+# Calls ord() function - returns ordinal number of input string
+# Capital letters have ordinal numbers between 65 ("A") and 90 ("Z")
+
+def get_capitals(string):
+    
+    capitals = ""
+    for i in string:
+        ord_num = ord(i)
+        
+        if ord_num >= 65 and ord_num <= 90:
+            capitals += i
+    
+    return capitals
+
+
+#CS
+#GIT
+print(get_capitals("CS1301"))
+print(get_capitals("Georgia Institute of Technology"))
