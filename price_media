@@ -1,0 +1,40 @@
+days_since_release = 14
+original_price = 60
+greatest_hits = True
+
+# function price_media() 
+# takes 3 arguments: 
+# -days_since_release, original_price, and greatest_hits with a default value of False
+
+# Determines the price of a newly-released album based on the time since it was released.
+
+# A new release loses $2 off its price for every full week since it was released. 
+# So, two full weeks (14 days) after a $60 game is released, it will cost $56.
+
+# If the release is considered a "greatest hit", it loses value half as fast: 
+# - after two weeks, it will be $58 instead of $56.
+
+# No release will ever fall to below $20
+
+# Prints the current price of the release.
+# For example, with the values above, it would print $58.
+
+def price_media(days, original_price, greatest_hits = False):
+    
+    weeks = days // 7
+    
+    if greatest_hits == True:
+        
+        lost_value = 2 * weeks * 0.5
+        
+    else:        
+        lost_value = 2 * weeks
+    
+    current_price = round(original_price - lost_value)
+    
+    if current_price <= 20:
+        current_price = 20
+    
+    return current_price
+
+print(f"${price_media(days_since_release, original_price, greatest_hits)}")
